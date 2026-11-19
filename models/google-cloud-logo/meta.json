@@ -1,0 +1,15 @@
+{
+  "slug": "google-cloud-logo",
+  "name": "Google Cloud Logo",
+  "category": "Brand Icons",
+  "summary": "Plush tubular 4-piece sculpture built on Google's 64x64 brand grid with a 3D toroidal saddle joint",
+  "units": "meters",
+  "dimensions": {
+    "width": 0.64,
+    "height": 0.5148,
+    "depth": 0.1113
+  },
+  "triangleCount": 85248,
+  "meshCount": 4,
+  "updatedAt": "2026-11-17"
+}

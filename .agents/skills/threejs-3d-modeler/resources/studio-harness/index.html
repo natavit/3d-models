@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>3D Studio Harness</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #e5e5e5;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+      #viewport {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+      }
+      #quad-overlay {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        display: none;
+      }
+      body.mode-ortho #quad-overlay {
+        display: block;
+      }
+      body.capture-clean .lil-gui {
+        display: none !important;
+      }
+      .quad-line-v {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        width: 1px;
+        background: rgba(20, 22, 26, 0.18);
+      }
+      .quad-line-h {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        height: 1px;
+        background: rgba(20, 22, 26, 0.18);
+      }
+      .quad-label {
+        position: absolute;
+        padding: 6px 10px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        color: #26292e;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgba(20, 22, 26, 0.12);
+        border-radius: 6px;
+        font-variant-numeric: tabular-nums;
+      }
+      .quad-tl { top: 12px; left: 12px; }
+      .quad-tr { top: 12px; left: calc(50% + 12px); }
+      .quad-bl { top: calc(50% + 12px); left: 12px; }
+      .quad-br { top: calc(50% + 12px); left: calc(50% + 12px); }
+    </style>
+  </head>
+  <body>
+    <canvas id="viewport"></canvas>
+    <div id="quad-overlay">
+      <div class="quad-line-v"></div>
+      <div class="quad-line-h"></div>
+      <div class="quad-label quad-tl">FRONT (+Z)</div>
+      <div class="quad-label quad-tr">RIGHT (+X)</div>
+      <div class="quad-label quad-bl">BACK (-Z)</div>
+      <div class="quad-label quad-br">TOP (+Y)</div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

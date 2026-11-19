@@ -1,0 +1,15 @@
+{
+  "slug": "ghibli-hilltop-castle",
+  "name": "Ghibli Hilltop Castle",
+  "category": "Environments",
+  "summary": "Storybook cliffside castle diorama with volumetric cumulus clouds, instanced meadow grass, GTAO lighting, and toggleable scenic layers",
+  "units": "meters",
+  "dimensions": {
+    "width": 1.004,
+    "height": 1.0031,
+    "depth": 0.9027
+  },
+  "triangleCount": 582193,
+  "meshCount": 671,
+  "updatedAt": "2026-11-18"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "bt21-koya-chair",
+  "name": "BT21 KOYA Sofa Recliner",
+  "category": "Furniture",
+  "summary": "TTRacing ORA plush velour power-recliner with synchronized scissor footrest, 240° swivel ring base, and gooseneck phone mount",
+  "units": "meters",
+  "dimensions": {
+    "width": 1.2042,
+    "height": 1.0856,
+    "depth": 0.8417
+  },
+  "triangleCount": 93968,
+  "meshCount": 66,
+  "updatedAt": "2026-11-17"
+}

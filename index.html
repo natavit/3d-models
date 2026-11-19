@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>3D Model Collection</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div id="gallery-view" class="gallery-shell">
+      <header class="gallery-header">
+        <div class="gallery-title-group">
+          <h1 class="gallery-title">3D Models</h1>
+          <span id="model-count" class="gallery-count">0 models</span>
+        </div>
+        <div class="gallery-controls">
+          <div id="category-bar" class="category-bar" role="tablist" aria-label="Categories"></div>
+          <label class="search-box">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input id="search-input" type="search" placeholder="Search collection" autocomplete="off" />
+          </label>
+        </div>
+      </header>
+
+      <main class="gallery-main">
+        <div id="model-grid" class="model-grid"></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <p class="empty-title">No matching models</p>
+          <p class="empty-sub">Clear your filter or add a model under <code>models/&lt;slug&gt;/model.js</code></p>
+        </div>
+      </main>
+    </div>
+
+    <div id="viewer-view" class="viewer-shell" hidden>
+      <canvas id="viewport"></canvas>
+
+      <header id="viewer-topbar" class="viewer-topbar">
+        <div class="viewer-nav-left">
+          <button id="back-btn" class="nav-back-btn" type="button" title="Back to collection (Esc)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>Collection</span>
+          </button>
+          <span class="crumb-sep">/</span>
+          <span id="viewer-title" class="viewer-model-title">Model</span>
+          <span id="viewer-specs" class="viewer-model-specs"></span>
+        </div>
+
+        <div class="viewer-toolbar">
+          <div class="segmented-control" role="group" aria-label="Camera rig">
+            <button id="btn-view-hero" class="seg-btn is-active" type="button">Studio 3/4</button>
+            <button id="btn-view-ortho" class="seg-btn" type="button">Quad ortho</button>
+          </div>
+          <button id="btn-clay" class="tool-btn" type="button">Clay</button>
+          <button id="btn-wire" class="tool-btn" type="button">Wireframe</button>
+          <button id="btn-grid" class="tool-btn" type="button">Grid</button>
+          <button id="btn-export" class="primary-btn" type="button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Export .glb</span>
+          </button>
+        </div>
+      </header>
+
+      <div id="gui-dock" class="gui-dock"></div>
+
+      <div id="quad-overlay" class="quad-overlay">
+        <div class="quad-line-v"></div>
+        <div class="quad-line-h"></div>
+        <div class="quad-label quad-tl">Front (+Z)</div>
+        <div class="quad-label quad-tr">Right (+X)</div>
+        <div class="quad-label quad-bl">Back (-Z)</div>
+        <div class="quad-label quad-br">Top (+Y)</div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

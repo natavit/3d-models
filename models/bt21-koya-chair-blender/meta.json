@@ -1,0 +1,15 @@
+{
+  "slug": "bt21-koya-chair-blender",
+  "name": "BT21 KOYA Sofa Recliner (Blender)",
+  "category": "Furniture",
+  "summary": "Sculpted natively in Blender 5.3 with Catmull-Clark subdivision surfaces, gathered bolster pleats, 3D stitched flank embroidery, and Cycles/glTF plush velour sheen",
+  "units": "meters",
+  "dimensions": {
+    "width": 1.1986,
+    "height": 1.1512,
+    "depth": 0.8879
+  },
+  "triangleCount": 345520,
+  "meshCount": 77,
+  "updatedAt": "2026-11-19"
+}
